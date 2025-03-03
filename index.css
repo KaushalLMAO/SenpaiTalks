@@ -98,7 +98,7 @@ body {
   }
   #headad-1,
   #headad-2 {
-    width: 5%;
+    display: none;
   }
 }
 
