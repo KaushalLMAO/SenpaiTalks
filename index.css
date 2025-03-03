@@ -63,10 +63,9 @@ body {
 .ad {
   height: 100%;
   width: 10%;
+  overflow: hidden;
 }
-#headad-1 {
-  float: left;
-}
+
 /* Responsive Design */
 
 /* Tablet */
