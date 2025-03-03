@@ -15,7 +15,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-
   z-index: 1000;
 }
 
@@ -31,20 +30,16 @@ body {
 #heading-ul li {
   color: white;
   font-size: 18px;
-
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
 #heading-ul li:hover {
   color: #0a0a0a;
-  font-weight: bold;
-  transform: scale(1.05);
 }
 
 #main {
   display: flex;
-  align-items: center;
   justify-content: center;
   height: 100vh;
   background-color: #f0f0f0;
@@ -55,10 +50,8 @@ body {
 
 #mainHeadlines {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: row;
-  max-width: 75%;
+  width: 75%;
   height: 100%;
   margin-top: 4%;
   flex-wrap: wrap;
@@ -67,24 +60,13 @@ body {
 }
 
 /* Ads */
-#headad-1,
-#headad-2 {
+.ad {
   height: 100%;
-  width: 8%;
-  background: url(ad.jpg) no-repeat center;
-  background-size: cover;
-  position: fixed;
-  top: 4.5%;
+  width: 10%;
 }
-
 #headad-1 {
-  left: 0;
+  float: left;
 }
-
-#headad-2 {
-  right: 0;
-}
-
 /* Responsive Design */
 
 /* Tablet */
@@ -92,16 +74,31 @@ body {
   #heading-ul {
     width: 100%;
     flex-direction: row;
+    flex-wrap: wrap;
   }
   #heading-ul li {
     font-size: medium;
+  }
+
+  #main {
+    display: flex;
+    flex-direction: column !important; /* Force column */
+    justify-content: flex-start; /* Ensures content aligns properly */
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+  }
+  #mainHeadlines {
+    display: flex;
+    flex-direction: row; /* Make headlines stack */
+    width: 90%; /* Give more space */
+    height: auto; /* Let content define height */
   }
   #headad-1,
   #headad-2 {
     display: none;
   }
 }
-
 /* Mobile */
 @media (max-width: 610px) {
   #heading-ul {
