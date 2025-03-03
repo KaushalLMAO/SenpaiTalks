@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 #headbar {
   background-color: #803c39;
   position: fixed;
@@ -11,7 +15,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  flex-wrap: wrap;
+
+  z-index: 1000;
 }
 
 #heading-ul {
@@ -26,33 +31,89 @@
 #heading-ul li {
   color: white;
   font-size: 18px;
-  font-family: "Poppins", sans-serif;
+
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #heading-ul li:hover {
   color: #0a0a0a;
+  font-weight: bold;
+  transform: scale(1.05);
 }
-/* Tablet responsive */
+
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-top: 60px;
+}
+
+#mainHeadlines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  max-width: 75%;
+  height: 100%;
+  margin-top: 4%;
+  flex-wrap: wrap;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+/* Ads */
+#headad-1,
+#headad-2 {
+  height: 100%;
+  width: 8%;
+  background: url(ad.jpg) no-repeat center;
+  background-size: cover;
+  position: fixed;
+  top: 4.5%;
+}
+
+#headad-1 {
+  left: 0;
+}
+
+#headad-2 {
+  right: 0;
+}
+
+/* Responsive Design */
+
+/* Tablet */
 @media (max-width: 768px) {
   #heading-ul {
     width: 100%;
     flex-direction: row;
   }
   #heading-ul li {
-    margin: 10px 0;
     font-size: medium;
   }
+  #headad-1,
+  #headad-2 {
+    width: 5%;
+  }
 }
-/* mobile responsive */
+
+/* Mobile */
 @media (max-width: 610px) {
   #heading-ul {
     width: 100%;
     flex-direction: column;
+    text-align: center;
   }
   #heading-ul li {
-    margin: 5px 0;
     font-size: small;
+  }
+  #headad-1,
+  #headad-2 {
+    display: none;
   }
 }
