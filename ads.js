@@ -1,12 +1,12 @@
 //ads
-let headadone = document.querySelector("Cheadad-img-1");
-let headadtwo = document.querySelector("Cheadad-img-2");
+let headadone = document.querySelector(".Cheadad-img-1");
+let headadtwo = document.querySelector(".Cheadad-img-2");
 let youradhere = "ad.jpg";
 let headadrealone;
 let headadrealtwo;
 let headoneurl;
 let headtwourl;
-if (!headadrealone) {
+if (headadrealone !== " ") {
   headadone.setAttribute("src", youradhere);
   headadone.addEventListener("click", () => {
     alert("No ad at the moment");
